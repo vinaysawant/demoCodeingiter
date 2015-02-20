@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?php echo base_url("assets/css/dashboard.css"); ?>"/>
 
 </head>
+
 
 <body>
 
@@ -50,26 +51,35 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Dashboard</h1>
+            <h1 class="page-header">Available Stock</h1>
+
+            <div class="text-right">
+                <?php echo form_open('medicines/add','class="form-inline"'); ?>
+                    <input type="text" class="form-control input-sm" name="name" placeholder="Name">
+                    <input type="text" class="form-control input-sm" name="quantity" placeholder="Quantity">
+                    <input type="submit" value="ADD" class="btn btn-success btn-sm">
+                </form>
+            </div>
+
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
+                        <th>SR NO</th>
+                        <th>Medicine</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
+                    <?php foreach ($result as $medicine) : ?>
+                        <tr>
+                            <td><?php echo $medicine->id; ?></td>
+                            <td><?php echo $medicine->name; ?></td>
+                            <td><?php echo $medicine->quantity; ?></td>
+                            <td><input type="button" class="btn btn-info btn-sm" value="Edit"></td>
+                        </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
