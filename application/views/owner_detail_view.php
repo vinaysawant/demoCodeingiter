@@ -1,6 +1,6 @@
 <?php include_once "layouts/header.php"; ?>
 <?php $count = 1; ?>
-<div class="container-fluid">
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
     <div class="row">
         <?php include_once "layouts/menu.php"; ?>
 
@@ -52,6 +52,36 @@
                             <td><?php echo $pet->species; ?></td>
                             <!--                            <td><input type="button" class="btn btn-info btn-sm" value="Open"></td>-->
                             <td><?php echo anchor('/owners/show/'.$result->id.'/pet/'.$pet->id,'Show')?></td>
+                        </tr>
+                    <?php $count++; ?>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <strong>Sell History</strong>
+            <div>
+                <select name="food" id="food">
+                    <option></option>
+                </select>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>SR NO</th>
+                        <th>Date</th>
+                        <th>Brand</th>
+                        <th>Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $count = 1 ?>
+                    <?php foreach ($sells as $sell) : ?>
+                        <tr>
+                            <td><?php echo $count; ?></td>
+                            <td><?php echo $sell->id; ?></td>
+                            <td><?php echo $sell->id; ?></td>
+                            <td><?php echo $sell->date; ?></td>
                         </tr>
                     <?php $count++; ?>
                     <?php endforeach; ?>

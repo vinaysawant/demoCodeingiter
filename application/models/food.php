@@ -21,8 +21,13 @@ class Food extends CI_Model
         $brand = $_POST['brand'];
         $name = $_POST['name'];
         $count = $_POST['quantity'];
+        $price = $_POST['price'];
 
-        $this->db->query("INSERT INTO foods (brand,name,quantity) VALUES ('{$brand}','{$name}', '{$count}')");
+        $this->db->query("INSERT INTO foods (brand,name,quantity,price) VALUES ('{$brand}','{$name}', '{$count}','{$price}')");
+    }
+
+    function sell($id){
+
     }
 
 }
