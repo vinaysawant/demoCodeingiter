@@ -65,7 +65,7 @@
       <file leaf-file-name="paws.sql" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/paws.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="88" selection-start="114" selection-end="114" vertical-scroll-proportion="0.1125" vertical-offset="0" max-vertical-offset="2754">
+            <state line="153" column="48" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.925" vertical-offset="2310" max-vertical-offset="2862">
               <folding />
             </state>
           </provider>
@@ -635,7 +635,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/paws.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="88" selection-start="114" selection-end="114" vertical-scroll-proportion="0.1125" vertical-offset="0" max-vertical-offset="2754">
+        <state line="153" column="48" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.925" vertical-offset="2310" max-vertical-offset="2862">
           <folding />
         </state>
       </provider>
