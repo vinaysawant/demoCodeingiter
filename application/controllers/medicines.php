@@ -35,9 +35,13 @@ class Medicines extends CI_Controller
     }
 
     function add(){
-        $this->load->model('medicine');
-        $this->medicine->add();
-        redirect('medicines');
-//        $this->load->view('medicine_view');
+        if ($this->session->userdata('logged_in')) {
+            $this->load->model('medicine');
+            $this->medicine->add();
+            redirect('medicines');
+        }else{
+            redirect('login', 'refresh');
+
+        }
     }
 } 

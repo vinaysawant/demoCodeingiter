@@ -35,9 +35,14 @@ class Foods extends CI_Controller
     }
 
     function add(){
-        $this->load->model('food');
-        $this->food->add();
-        redirect('foods');
-//        $this->load->view('medicine_view');
+
+        if ($this->session->userdata('logged_in')) {
+            $this->load->model('food');
+            $this->food->add();
+            redirect('foods');
+        } else {
+            //If no session, redirect to login page
+            redirect('login', 'refresh');
+        }
     }
 } 

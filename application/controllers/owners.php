@@ -66,35 +66,65 @@ class Owners extends CI_Controller
     }
 
     function add(){
-        $this->load->model('owner');
-        $this->owner->add();
-        redirect('owners');
-//        $this->load->view('medicine_view');
+        if ($this->session->userdata('logged_in')) {
+            $this->load->model('owner');
+            $this->owner->add();
+            redirect('owners');
+        }else{
+            redirect('login', 'refresh');
+
+        }
     }
 
     function addPet($id){
-        $this->load->model('owner');
-        $this->load->model('pet');
-        $this->pet->add($id);
-        redirect('owners/show/'.$id);
-//        $this->load->view('medicine_view');
+
+        if ($this->session->userdata('logged_in')) {
+            $this->load->model('owner');
+            $this->load->model('pet');
+            $this->pet->add($id);
+            redirect('owners/show/'.$id);
+        }else{
+            redirect('login', 'refresh');
+
+        }
     }
     function addRecord($id,$petId){
-        $this->load->model('owner');
-        $this->load->model('pet');
-        $this->load->model('record');
-        $this->record->add($id,$petId);
-        redirect('owners/show/'.$id.'/pet/'.$petId);
-//        $this->load->view('medicine_view');
+
+        if ($this->session->userdata('logged_in')) {
+            $this->load->model('owner');
+            $this->load->model('pet');
+            $this->load->model('record');
+            $this->record->add($id,$petId);
+            redirect('owners/show/'.$id.'/pet/'.$petId);
+        }
+        else{
+            redirect('login', 'refresh');
+        }
     }
 
     function showPet($id,$petId){
-        $this->load->model('owner');
-        $this->load->model('pet');
-        $this->load->model('record');
-        $data['owner_id'] = $id ;
-        $data['pet'] = $this->pet->getPet($id,$petId);
-        $data['records'] = $this->record->getRecords($petId);
-        $this->load->view('pet_details',$data);
+
+
+        if ($this->session->userdata('logged_in')) {
+
+            $this->load->model('owner');
+            $this->load->model('pet');
+            $this->load->model('record');
+            $data['owner_id'] = $id ;
+            $data['pet'] = $this->pet->getPet($id,$petId);
+            $data['records'] = $this->record->getRecords($petId);
+            $this->load->view('pet_details',$data);
+
+        }
+        else{
+            redirect('login', 'refresh');
+        }
+
+    }
+
+    function logout(){
+
+        $this->session->unset_userdata('logged_in');
+        redirect('login', 'refresh');
     }
 } 
