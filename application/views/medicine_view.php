@@ -9,9 +9,9 @@
 
             <div class="text-right">
                 <?php echo form_open('medicines/add','class="form-inline"'); ?>
-                    <input type="text" class="form-control input-sm" name="name" placeholder="Name">
-                    <input type="text" class="form-control input-sm" name="quantity" placeholder="Quantity">
-                    <input type="submit" value="ADD" class="btn btn-success btn-sm">
+                    <input type="text" id="name" class="form-control input-sm" name="name" placeholder="Name">
+                    <input type="number" id="quantity" class="form-control input-sm" name="quantity" placeholder="Quantity">
+                    <input type="submit" id="addMedicineBtn" value="ADD" class="btn btn-success btn-sm">
                 </form>
             </div>
 
@@ -22,7 +22,7 @@
                         <th>SR NO</th>
                         <th>Medicine</th>
                         <th>Quantity</th>
-                        <th>Action</th>
+<!--                        <th>Action</th>-->
                     </tr>
                     </thead>
                     <tbody>
@@ -31,7 +31,7 @@
                             <td><?php echo $medicine->id; ?></td>
                             <td><?php echo $medicine->name; ?></td>
                             <td><?php echo $medicine->quantity; ?></td>
-                            <td><input type="button" class="btn btn-info btn-sm" value="Edit"></td>
+<!--                            <td><input type="button" class="btn btn-info btn-sm" value="Edit"></td>-->
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

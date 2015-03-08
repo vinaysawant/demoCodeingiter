@@ -92,6 +92,7 @@ class Owners extends CI_Controller
         $this->load->model('owner');
         $this->load->model('pet');
         $this->load->model('record');
+        $data['owner_id'] = $id ;
         $data['pet'] = $this->pet->getPet($id,$petId);
         $data['records'] = $this->record->getRecords($petId);
         $this->load->view('pet_details',$data);

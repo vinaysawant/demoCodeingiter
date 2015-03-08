@@ -12,10 +12,18 @@ class Record extends CI_Model
 
     function add($id,$petId){
         $sign = $_POST['clinical_sign'];
-        $treatment = $_POST['treatment'];
+        $treatment = nl2br($_POST['treatment']);
         $charge = $_POST['charge'];
+        $next_date = $_POST['remind'];
+        $date = date('Y-m-d');
 
-        $this->db->query("INSERT INTO records (pet_id,clinical_sign,treatment,charge) VALUES ('{$petId}','{$sign}','{$treatment}', '{$charge}')");
+        $this->db->query("INSERT INTO records (pet_id,date,clinical_sign,treatment,charge) VALUES ('{$petId}','{$date}','{$sign}','{$treatment}', '{$charge}')");
+
+        $newDate = new DateTime($next_date);
+        $newDate = $newDate->format('Y-m-d');
+
+        $this->db->query("UPDATE pets SET next_date = '{$newDate}' WHERE id = '{$petId}'");
+
     }
 
     function getRecords($petId){

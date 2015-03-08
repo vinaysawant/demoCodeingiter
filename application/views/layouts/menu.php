@@ -3,6 +3,6 @@
         <li><?php echo anchor('/owners','Owners')?></li>
         <li><?php echo anchor('/medicines','Medicines')?></li>
         <li><?php echo anchor('/foods','Food Stock')?></li>
-        <li><?php echo anchor('/remainders','Remainders')?></li>
+        <li><?php echo anchor('/remainders','Reminders')?></li>
     </ul>
 </div>

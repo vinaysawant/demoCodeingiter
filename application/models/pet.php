@@ -35,4 +35,17 @@ class Pet extends CI_Model
 
         $this->db->query("INSERT INTO pets (name,owner_id,sex,age,species) VALUES ('{$name}','{$id}', '{$sex}','{$age}','{$species}')");
     }
+
+    function getRemainders(){
+        $today = date('Y-m-d');
+
+        $this->db->select('*,p.id as pet_id,p.name as pet_name');
+        $this->db->from('pets as p');
+        $this->db->join('owners o','o.id = p.owner_id');
+        $this->db->where('p.next_date > '.$today);
+        $this->db->group_by('p.id');
+        $query = $this->db->get();
+        return $result = $query->result();
+
+    }
 }

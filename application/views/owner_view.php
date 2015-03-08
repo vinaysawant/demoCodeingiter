@@ -9,11 +9,11 @@
 
             <div class="text-right">
                 <?php echo form_open('owners/add','class="form-inline"'); ?>
-                    <input type="text" class="form-control input-sm" name="name" placeholder="Name">
-                    <input type="text" class="form-control input-sm" name="address" placeholder="Address">
-                    <input type="text" class="form-control input-sm" name="phone" placeholder="Phone">
-                    <input type="text" class="form-control input-sm" name="email" placeholder="Email">
-                    <input type="submit" value="ADD" class="btn btn-success btn-sm">
+                    <input type="text" class="form-control input-sm" id="name" name="name" placeholder="Name">
+                    <input type="text" class="form-control input-sm" id="address" name="address" placeholder="Address">
+                    <input type="number" class="form-control input-sm" id="phone" name="phone" placeholder="Phone">
+                    <input type="email" class="form-control input-sm" id="email" name="email" placeholder="Email">
+                    <input type="submit" id="addOwnerBtn" value="ADD" class="btn btn-success btn-sm">
                 </form>
             </div>
 

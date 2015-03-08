@@ -9,10 +9,10 @@
 
             <div class="text-right">
                 <?php echo form_open('foods/add','class="form-inline"'); ?>
-                    <input type="text" class="form-control input-sm" name="brand" placeholder="Brand">
-                    <input type="text" class="form-control input-sm" name="name" placeholder="Name">
-                    <input type="text" class="form-control input-sm" name="quantity" placeholder="Quantity">
-                    <input type="submit" value="ADD" class="btn btn-success btn-sm">
+                    <input type="text" id="brand"  class="form-control input-sm" name="brand" placeholder="Brand">
+                    <input type="text" id="name" class="form-control input-sm" name="name" placeholder="Name">
+                    <input type="number" id="quantity" class="form-control input-sm" name="quantity" placeholder="Quantity">
+                    <input type="submit" id="addFoodBtn" value="ADD" class="btn btn-success btn-sm">
                 </form>
             </div>
 
@@ -27,12 +27,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($result as $medicine) : ?>
+                    <?php foreach ($result as $food) : ?>
                         <tr>
-                            <td><?php echo $medicine->id; ?></td>
-                            <td><?php echo $medicine->name; ?></td>
-                            <td><?php echo $medicine->quantity; ?></td>
-                            <td><input type="button" class="btn btn-info btn-sm" value="Edit"></td>
+                            <td><?php echo $food->id; ?></td>
+                            <td><?php echo $food->brand; ?></td>
+                            <td><?php echo $food->name; ?></td>
+                            <td><?php echo $food->quantity; ?></td>
+<!--                            <td><input type="button" class="btn btn-info btn-sm" value="Edit"></td>-->
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

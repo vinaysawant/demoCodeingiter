@@ -23,11 +23,11 @@ class Foods extends CI_Controller
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
 
-            $this->load->model('medicine');
-            $data['result'] = $this->medicine->getMedicines();
+            $this->load->model('food');
+            $data['result'] = $this->food->getFoods();
 
             $this->load->helper(array('form'));
-            $this->load->view('medicine_view', $data);
+            $this->load->view('food_view', $data);
         } else {
             //If no session, redirect to login page
             redirect('login', 'refresh');
@@ -35,9 +35,9 @@ class Foods extends CI_Controller
     }
 
     function add(){
-        $this->load->model('medicine');
-        $this->medicine->add();
-        redirect('medicines');
+        $this->load->model('food');
+        $this->food->add();
+        redirect('foods');
 //        $this->load->view('medicine_view');
     }
 } 

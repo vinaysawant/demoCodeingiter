@@ -23,9 +23,9 @@ class Remainders extends CI_Controller
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
 
-            $this->load->model('medicine');
-            $data['result'] = $this->medicine->getMedicines();
-
+            $this->load->model('owner');
+            $this->load->model('pet');
+            $data['result'] = $this->pet->getRemainders();
             $this->load->helper(array('form'));
             $this->load->view('remainder_view', $data);
         } else {

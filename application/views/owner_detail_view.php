@@ -1,4 +1,5 @@
 <?php include_once "layouts/header.php"; ?>
+<?php $count = 1; ?>
 <div class="container-fluid">
     <div class="row">
         <?php include_once "layouts/menu.php"; ?>
@@ -18,11 +19,14 @@
 
             <div class="text-right">
                 <?php echo form_open('owners/show/'.$result->id.'/addPet','class="form-inline"'); ?>
-                <input type="text" class="form-control input-sm" name="name" placeholder="Name">
-                <input type="text" class="form-control input-sm" name="sex" placeholder="Sex">
-                <input type="text" class="form-control input-sm" name="age" placeholder="Age">
-                <input type="text" class="form-control input-sm" name="species" placeholder="Species">
-                <input type="submit" value="ADD" class="btn btn-success btn-sm">
+                <input type="text" class="form-control input-sm" id="name" name="name" placeholder="Name">
+                <select class="form-control input-sm" name="sex" id="sex">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+                <input type="text" class="form-control input-sm" id="age" name="age" placeholder="Age">
+                <input type="text" class="form-control input-sm" id="species" name="species" placeholder="Species">
+                <input type="submit" id="addPetBtn" value="ADD" class="btn btn-success btn-sm">
                 </form>
             </div>
 
@@ -41,7 +45,7 @@
                     <tbody>
                     <?php foreach ($pets as $pet) : ?>
                         <tr>
-                            <td><?php echo $pet->id; ?></td>
+                            <td><?php echo $count; ?></td>
                             <td><?php echo $pet->name; ?></td>
                             <td><?php echo $pet->sex; ?></td>
                             <td><?php echo $pet->age; ?></td>
@@ -49,6 +53,7 @@
                             <!--                            <td><input type="button" class="btn btn-info btn-sm" value="Open"></td>-->
                             <td><?php echo anchor('/owners/show/'.$result->id.'/pet/'.$pet->id,'Show')?></td>
                         </tr>
+                    <?php $count++; ?>
                     <?php endforeach; ?>
                     </tbody>
                 </table>
