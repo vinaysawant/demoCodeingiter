@@ -51,13 +51,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.7852883" vertical-offset="631" max-vertical-offset="1386">
+            <state line="42" column="5" selection-start="990" selection-end="990" vertical-scroll-proportion="-4.6296296" vertical-offset="631" max-vertical-offset="1386">
               <folding>
                 <marker date="1425820156370" expanded="true" signature="1387:1446" placeholder="UPDATE users..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paws.sql" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/paws.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="88" selection-start="114" selection-end="114" vertical-scroll-proportion="0.1125" vertical-offset="0" max-vertical-offset="2754">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,19 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="35" column="21" selection-start="866" selection-end="866" vertical-scroll-proportion="-15.962963" vertical-offset="109" max-vertical-offset="702">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="food.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/food.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="918">
-              <folding>
-                <marker date="1425817970534" expanded="true" signature="752:850" placeholder="INSERT INTO ..." />
-                <marker date="1425817970534" expanded="true" signature="1020:1124" placeholder="INSERT INTO ..." />
-                <marker date="1425817970534" expanded="true" signature="1296:1363" placeholder="UPDATE foods..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -174,6 +170,7 @@
         <option value="$PROJECT_DIR$/application/models/user.php" />
         <option value="$PROJECT_DIR$/application/views/setting_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/settings.php" />
+        <option value="$PROJECT_DIR$/db/paws.sql" />
       </list>
     </option>
   </component>
@@ -239,43 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,11 +252,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$/application/views" />
       <recent name="$PROJECT_DIR$/application/controllers" />
       <recent name="$PROJECT_DIR$/application/models" />
       <recent name="$PROJECT_DIR$/assets/css" />
-      <recent name="$PROJECT_DIR$/assets/js" />
     </key>
   </component>
   <component name="RunManager">
@@ -366,11 +327,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19080">
@@ -603,9 +559,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="918">
           <folding>
-            <marker date="1425817970534" expanded="true" signature="752:850" placeholder="INSERT INTO ..." />
-            <marker date="1425817970534" expanded="true" signature="1020:1124" placeholder="INSERT INTO ..." />
-            <marker date="1425817970534" expanded="true" signature="1296:1363" placeholder="UPDATE foods..." />
+            <marker date="1425817970534" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425817970534" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1425817970534" expanded="true" signature="-1:-1" placeholder="UPDATE foods..." />
           </folding>
         </state>
       </provider>
@@ -670,10 +626,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.7852883" vertical-offset="631" max-vertical-offset="1386">
+        <state line="42" column="5" selection-start="990" selection-end="990" vertical-scroll-proportion="-4.6296296" vertical-offset="631" max-vertical-offset="1386">
           <folding>
             <marker date="1425820156370" expanded="true" signature="1387:1446" placeholder="UPDATE users..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/paws.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="88" selection-start="114" selection-end="114" vertical-scroll-proportion="0.1125" vertical-offset="0" max-vertical-offset="2754">
+          <folding />
         </state>
       </provider>
     </entry>
