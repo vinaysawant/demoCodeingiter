@@ -41,6 +41,7 @@ class Owners extends CI_Controller
             $this->load->model('owner');
             $this->load->model('pet');
             $this->load->model('sell');
+            $this->load->model('food');
             $data['result'] = $this->owner->getOwner($id);
             $data['pets'] = $this->pet->getPets($id);
             $data['sells'] = $this->sell->getSells($id);

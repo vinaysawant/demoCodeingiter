@@ -83,6 +83,20 @@ $(document).ready(function(){
         console.log("hi 4");
         return state;
     });
+    
+    $("#sellFoodbtn").click(function(){
+
+        var quantity = $('#quantity').val();
+        var state;
+        if(quantity.trim() != ''){
+            state = true;
+        }else{
+            state = false;
+        }
+
+        console.log("hi 4");
+        return state;
+    });
 
 
 });

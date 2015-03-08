@@ -60,9 +60,16 @@
             </div>
             <strong>Sell History</strong>
             <div>
-                <select name="food" id="food">
-                    <option></option>
-                </select>
+                    <?php echo form_open('foods/sell/'.$result->id,'class="form-inline"'); ?>
+                    <select class="form-control" name="food_id" id="food_id">
+                        <?php foreach ($foods as $food):?>
+                            <option value="<?php echo $food->id; ?>"><?php echo $food->brand . '-'.$food->name.' ( ' .$food->quantity . ' )'; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <input class="form-control" type="number" name="quantity" id="quantity" placeholder="Quantity">
+                    <input type="submit" name="sell" id="sellFoodbtn" value="Sell" class="btn btn-warning">
+                </form>
+
             </div>
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -72,6 +79,7 @@
                         <th>Date</th>
                         <th>Brand</th>
                         <th>Name</th>
+                        <th>Quantity</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -79,9 +87,10 @@
                     <?php foreach ($sells as $sell) : ?>
                         <tr>
                             <td><?php echo $count; ?></td>
-                            <td><?php echo $sell->id; ?></td>
-                            <td><?php echo $sell->id; ?></td>
-                            <td><?php echo $sell->date; ?></td>
+                            <td><?php echo (new DateTime($sell->date))->format('d/m/Y'); ?></td>
+                            <td><?php echo $sell->brand; ?></td>
+                            <td><?php echo $sell->name; ?></td>
+                            <td><?php echo $sell->s_quantity; ?></td>
                         </tr>
                     <?php $count++; ?>
                     <?php endforeach; ?>

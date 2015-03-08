@@ -45,4 +45,15 @@ class Foods extends CI_Controller
             redirect('login', 'refresh');
         }
     }
+    function sell($id){
+
+        if ($this->session->userdata('logged_in')) {
+            $this->load->model('food');
+            $this->food->sell($id);
+            redirect('owners/show/'.$id);
+        } else {
+            //If no session, redirect to login page
+            redirect('login', 'refresh');
+        }
+    }
 } 

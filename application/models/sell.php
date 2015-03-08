@@ -11,8 +11,9 @@ class Sell extends CI_Model
 {
 
     function getSells($id){
-        $this->db->select('*');
-        $this->db->from('sells');
+        $this->db->select('*,s.quantity as s_quantity');
+        $this->db->from('sells as s');
+        $this->db->join('foods f','f.id = s.food_id');
         $this->db->where('owner_id',$id);
         $query = $this->db->get();
         return $result = $query->result();
