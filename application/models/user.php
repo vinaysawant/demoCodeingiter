@@ -25,4 +25,15 @@ class User extends CI_Model
             return false;
         }
     }
+
+    function getUser(){
+        $this->db->select('id, username, password');
+        $this->db->from('users');
+        $this->db->where('id', 1);
+        $this->db->limit(1);
+
+        $query = $this->db->get()->row();
+        return $query;
+
+    }
 } 

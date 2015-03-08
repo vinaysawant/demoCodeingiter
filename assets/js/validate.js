@@ -83,7 +83,7 @@ $(document).ready(function(){
         console.log("hi 4");
         return state;
     });
-    
+
     $("#sellFoodbtn").click(function(){
 
         var quantity = $('#quantity').val();
